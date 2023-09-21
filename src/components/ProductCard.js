@@ -8,6 +8,7 @@ import watch from "../images/watch.jpg";
 import watch2 from "../images/watch-1new.avif";
 import addcart from "../images/add-cart.svg";
 import view from "../images/view.svg";
+import watchz from "../images/Watchz.jpg"
 const ProductCard = (props) => {
   const { grid } = props
   let location = useLocation();
@@ -15,7 +16,7 @@ const ProductCard = (props) => {
 
   return (
     <>
-      <div className={` ${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}>
+      <div className={` ${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}>
         <Link to=':id' className='product-card position-relative'>
           <div className='wishlist-icon position-absolute'>
             <button className='border-0 bg-transparent'>
@@ -24,7 +25,7 @@ const ProductCard = (props) => {
           </div>
           <div className='product-image'>
             <img src={wish} className='img-fluid' alt='product image' />
-            <img src={watch2} className='img-fluid' alt='product image' />
+            <img src={watch2}  style={{width:"100%",height:"100%"}} alt='product image' />
 
 
           </div>
@@ -62,14 +63,14 @@ const ProductCard = (props) => {
           </div>
         </Link>
       </div>
-      <div className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-3"}`}>
+      <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}>
         <Link className='product-card position-relative'>
           <div className='wishlist-icon position-absolute'>
             <Link><img src='images/wish.svg' alt='wishlist' /></Link>
           </div>
           <div className='product-image '>
             <img src={watch} className='img-fluid' alt='product image' />
-            <img src={watch2} className='img-fluid' alt='product image' />
+            <img src={watch2}  style={{width:"100%",height:"100%"}} alt='product image' />
 
 
           </div>

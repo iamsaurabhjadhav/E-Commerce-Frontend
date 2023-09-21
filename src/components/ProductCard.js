@@ -57,19 +57,19 @@ const ProductCard = (props) => {
               <Link>
                 <img src={addcart} alt='addcart' />
               </Link>
-
-
             </div>
           </div>
         </Link>
       </div>
-      <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}>
-        <Link to={`${location.pathname == "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/:id" : ":id"}`} className='product-card position-relative'>
+      <div className={` ${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}>
+        <Link to={`${location.pathname == "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/1" : ":id"}`} className='product-card position-relative'>
           <div className='wishlist-icon position-absolute'>
-            <Link><img src='images/wish.svg' alt='wishlist' /></Link>
+            <button className='border-0 bg-transparent'>
+              <img src={wish} alt='wishlist' />
+            </button>
           </div>
-          <div className='product-image '>
-            <img src={watch} className='img-fluid' alt='product image' />
+          <div className='product-image'>
+            <img src={wish} className='img-fluid' alt='product image' />
             <img src={watch2} style={{ width: "100%", height: "100%" }} alt='product image' />
 
 
@@ -86,24 +86,22 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
-            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`} >
               Human beings are complex and wonderful creatures! Check out the following adjectives to describe them in all their glory. I divided these Spanish describing words into the categories of personality, appearance, and emotional states.</p>
             <p className='price'>$100.00</p>
 
           </div>
           <div className='action-bar position-absolute'>
             <div className='d-flex flex-column gap-15'>
-              <button className='border-0 bg-transparent'>
-                <img src='images/prodcompare.svg' alt='compare' />
-              </button>
-              <button className='border-0 bg-transparent'>
-                <img src='images/view.svg' alt='view' />
-              </button>
-              <button className='border-0 bg-transparent'>
-                <img src='images/add-cart.svg' alt='addcart' />
-              </button>
-
-
+              <Link>
+                <img src={prodcompare} alt='compare' />
+              </Link>
+              <Link>
+                <img src={view} alt='view' />
+              </Link>
+              <Link>
+                <img src={addcart} alt='addcart' />
+              </Link>
             </div>
           </div>
         </Link>
